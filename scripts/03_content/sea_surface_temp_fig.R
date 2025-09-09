@@ -11,7 +11,7 @@ data("data_heatwaves")
 p <- ggplot(data = data_heatwaves,
             mapping = aes(x = year, y = temp_mean,
                           group = paste(fishery, eu_rnpa))) +
-  geom_line(size = 0.1, color = "red") +
+  geom_line(linewidth = 0.1, color = "red") +
   labs(x = "Year",
        y = "Mean Temperature (C)",
        title = "Mean Temp. by Year",
@@ -23,3 +23,16 @@ plot(p)
 # export my plot
 ggsave(plot = p,
        filename = "results/img/my_first_plot.pdf")
+
+p2 <- ggplot(data = data_heatwaves,
+             mapping = aes(x = year, y = temp_mean,
+                           group = paste(fishery, eu_rnpa))) +
+  geom_line(linewidth = 0.1, color = "salmon") +
+  labs(x = "Year",
+       y = "Mean Temperature (C)",
+       title = "Mean Temp. by Year",
+       subtitle = "(It looks like the Mariana Trench)", # ER changed this label
+       caption = "Getting hotter...")
+
+ggsave(plot = p2,
+       filename = "results/img/my_second_plot.pdf")
