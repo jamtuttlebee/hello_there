@@ -15,7 +15,7 @@ p <- ggplot(data = data_heatwaves,
   labs(x = "Year",
        y = "Mean Temperature (C)",
        title = "Mean Temp. by Year",
-       subtitle = "(It looks like the Grand Canyon)",
+       subtitle = "(It looks like the Mariana Trench)", # ER changed this label
        caption = "Getting hotter...")
 # this makes sure it actually updates p and sends it to "plots", but still have to run both
 plot(p)
