@@ -11,7 +11,7 @@ data("data_heatwaves")
 p <- ggplot(data = data_heatwaves,
             mapping = aes(x = year, y = temp_mean,
                           group = paste(fishery, eu_rnpa))) +
-  geom_line(size = 0.1, color = "red") +
+  geom_line(linewidth = 0.1, color = "red") +
   labs(x = "Year",
        y = "Mean Temperature (C)",
        title = "Mean Temp. by Year",
@@ -27,7 +27,7 @@ ggsave(plot = p,
 p2 <- ggplot(data = data_heatwaves,
              mapping = aes(x = year, y = temp_mean,
                            group = paste(fishery, eu_rnpa))) +
-  geom_line(size = 0.1, color = "salmon") +
+  geom_line(linewidth = 0.1, color = "salmon") +
   labs(x = "Year",
        y = "Mean Temperature (C)",
        title = "Mean Temp. by Year",
